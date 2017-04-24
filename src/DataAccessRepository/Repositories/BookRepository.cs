@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Models;
 
 namespace DataAccessRepository.DataModels
@@ -21,14 +23,19 @@ namespace DataAccessRepository.DataModels
             m_context.Books.AddRange(records);
         }
 
-        public override IEnumerable<BookDataModel> FindAll()
+        public override Task<List<BookDataModel>> FindAll()
         {
-            return m_context.Books.ToList();
+            return m_context.Books.ToListAsync();
         }
 
         public override BookDataModel Find(int id)
         {
             return m_context.Books.FirstOrDefault(b => b.Id == id);
+        }
+
+        public override BookDataModel FindLast()
+        {
+            return m_context.Books.OrderByDescending(b => b.Id).FirstOrDefault();
         }
 
         public override void Remove(int id)

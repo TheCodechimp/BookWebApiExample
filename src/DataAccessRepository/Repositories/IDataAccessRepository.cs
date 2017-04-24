@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Models;
 using Models.Shared;
 
 namespace DataAccessRepository
@@ -18,8 +19,9 @@ namespace DataAccessRepository
 
         public abstract void Add(TEntity record);
         public abstract void AddRange(IEnumerable<TEntity> records);
-        public abstract IEnumerable<TEntity> FindAll();
+        public abstract Task<List<BookDataModel>> FindAll();
         public abstract TEntity Find(int id);
+        public abstract BookDataModel FindLast();
         public abstract void Remove(int id);
         public abstract void RemoveRange(IEnumerable<int> idList);
         public abstract void Update(TEntity record);

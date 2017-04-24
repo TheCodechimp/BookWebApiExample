@@ -18,7 +18,10 @@
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
     "DataAccessRepository": "1.0.0-*",
-    "Models": "1.0.0-*"
+    "Models": "1.0.0-*",
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
   },
 
   "tools": {
