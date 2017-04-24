@@ -11,6 +11,18 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+<<<<<<< HEAD
+=======
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "BookWebApiExample": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000/api/values",
+>>>>>>> 585f56eb23eb5add4767a1810dff0384891944b6
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
